@@ -9,7 +9,7 @@ const app = express(); //instance for express
 var nodemailer = require("nodemailer");
 //api middleware
 app.use(express.json());
-app.use(express.urlencoded());
+app.use(express.urlencoded({ extended: true }))
 app.use(
   "/css",
   express.static(path.join(__dirname, "node_modules/bootstrap/dist/css"))
