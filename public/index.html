@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="col-xl-12 col-lg-12 col-sm-10 col-md-12">
+      <form
+        method="POST"
+        class="rounded shadow p-30"
+        id="request_form"
+        action="/formPost"
+      >
+        <div class="form-row">
+          <div class="form-group mb-30 col-md-6">
+            <!--<label class="text-black-200 h5 font-weight-600 mb-2" for="fname">{{ i18n "name"}}*</label>-->
+            <input
+              class="form-control shadow-none"
+              type="text"
+              name="fname"
+              placeholder="Name*"
+              id="fname"
+              required
+            />
+          </div>
+          <div class="form-group mb-30 col-md-6">
+            <!-- <label class="text-black-200 h5 font-weight-600 mb-2" for="website">{{i18n "company_name"}}*</label>-->
+            <input
+              class="form-control shadow-none"
+              type="text"
+              name="company_name"
+              placeholder="Company name*"
+              required
+            />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group mb-30 col-md-6">
+            <!--<label class="text-black-200 h5 font-weight-600 mb-2" for="email">{{i18n "mail"}}*</label>-->
+            <input
+              class="form-control shadow-none"
+              type="email"
+              name="email_address"
+              placeholder="Email address*"
+              id="email"
+              required
+            />
+          </div>
+          <div class="form-group mb-30 col-md-6">
+            <!--<label class="text-black-200 h5 font-weight-600 mb-2" for="phone">{{i18n "phone_number"}}*</label>-->
+            <input
+              class="form-control shadow-none acceptnumber"
+              type="tel"
+              name="phone_number"
+              placeholder="Phone number*"
+              required
+            />
+          </div>
+        </div>
+        <div class="form-group mb-30">
+          <!--<label class="text-black-200 h5 font-weight-600 mb-2" for="message">{{i18n "message"}}*</label>-->
+          <textarea
+            class="form-control shadow-none"
+            name="comment"
+            rows="3"
+            id="message"
+            placeholder="Have something to say to us?*"
+            required
+          ></textarea>
+        </div>
+        <div class="form-group mb-30">
+          <div
+            class="g-recaptcha"
+            data-sitekey="6Lf9RNkcAAAAAI5PRaFKWTHmioK6NYeyJVu9JbPk"
+            data-callback="enableSubmit"
+          ></div>
+        </div>
+
+        <button
+          type="submit"
+          class="btn btn-primary btn-submit w-100"
+          style="width: 100"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+  </body>
+</html>
