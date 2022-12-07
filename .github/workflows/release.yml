@@ -16,7 +16,7 @@ jobs:
     - name: Create a Release
       uses: elgohr/Github-Release-Action@main
       env:
-        GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+        GITHUB_TOKEN: ${{ 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 }}
       with:
         title: ${{ github.sha }}
 
@@ -27,7 +27,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          token: ${{ secrets.RELEASE_TOKEN }} # for pushing to protected branch
+          token: ${{ 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 }} # for pushing to protected branch
       - name: Publish new version
         run: |
           git config --global user.email "sanjeevi.k@spritle.com"
